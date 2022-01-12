@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前端自检清单 | 罗慧</title><meta name="keywords" content="前端自检清单"><meta name="author" content="罗慧"><meta name="copyright" content="罗慧"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JavaScript基础变量和类型 JavaScript规定了几种语言类型数据类型篇有讲到js数据类型 JavaScript目前有八种内置类型：Number，String，Boolean，Null，Undefined，Object，Symbol，BigInt  其中 Symbol是es6新加入的  BigInt 是一种内置对象，它提供了一种方法来表示大于 2^53 - 1 的整数。这原本是 Jav">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端自检清单">
+<meta property="og:url" content="http://example.com/2021/11/25/%E5%89%8D%E7%AB%AF%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95/index.html">
+<meta property="og:site_name" content="罗慧">
+<meta property="og:description" content="JavaScript基础变量和类型 JavaScript规定了几种语言类型数据类型篇有讲到js数据类型 JavaScript目前有八种内置类型：Number，String，Boolean，Null，Undefined，Object，Symbol，BigInt  其中 Symbol是es6新加入的  BigInt 是一种内置对象，它提供了一种方法来表示大于 2^53 - 1 的整数。这原本是 Jav">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/imgs/2.jpg">
+<meta property="article:published_time" content="2021-11-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-02T03:17:26.000Z">
+<meta property="article:author" content="罗慧">
+<meta property="article:tag" content="前端自检清单">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/imgs/2.jpg"><link rel="shortcut icon" href="/img/toux.jpg"><link rel="canonical" href="http://example.com/2021/11/25/%E5%89%8D%E7%AB%AF%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端自检清单',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-02 11:17:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/toux.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-fw fas fa-sitemap"></i><span> 友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fas fa-heart card-announcement-animation"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">罗慧</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa-fw fa fa-book"></i><span> 找文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa-fw fas fa-sitemap"></i><span> 友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-fw fas fa-heart card-announcement-animation"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">前端自检清单</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-24T16:00:00.000Z" title="发表于 2021-11-25 00:00:00">2021-11-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-02T03:17:26.000Z" title="更新于 2021-12-02 11:17:26">2021-12-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前端自检清单"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><h1 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h1><h2 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h2><ul>
+<li><p>JavaScript规定了几种语言类型<br><b>数据类型篇有讲到<a href="/2021/07/17/js-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="js数据类型">js数据类型</a> </b><br>JavaScript目前有八种内置类型：<br>Number，String，Boolean，Null，Undefined，Object，Symbol，BigInt</p>
+<blockquote>
+<p>其中 Symbol是es6新加入的</p>
+</blockquote>
+<p>BigInt 是一种内置对象，它提供了一种方法来表示大于 2^53 - 1 的整数。这原本是 Javascript中可以用 Number 表示的最大数字。BigInt 可以表示任意大的整数。<br>可以用在一个整数字面量后面加 n 的方式定义一个 BigInt ，如：10n，或者调用函数BigInt()。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> theBiggestInt = <span class="number">9007199254740991n</span>;</span><br><span class="line"><span class="keyword">const</span> alsoHuge = <span class="built_in">BigInt</span>(<span class="number">9007199254740991</span>);<span class="comment">// ↪ 9007199254740991n</span></span><br><span class="line"><span class="keyword">const</span> hugeString = <span class="built_in">BigInt</span>(<span class="string">&quot;9007199254740991&quot;</span>);<span class="comment">// ↪ 9007199254740991n</span></span><br><span class="line"><span class="keyword">const</span> hugeHex = <span class="built_in">BigInt</span>(<span class="string">&quot;0x1fffffffffffff&quot;</span>);<span class="comment">// ↪ 9007199254740991n</span></span><br><span class="line"><span class="keyword">const</span> hugeBin = <span class="built_in">BigInt</span>(<span class="string">&quot;0b11111111111111111111111111111111111111111111111111111&quot;</span>); <span class="comment">// ↪ 9007199254740991n</span></span><br></pre></td></tr></table></figure></li>
+<li><p>JavaScript对象的底层数据结构是什么</p>
+<a href="/2021/11/25/%E5%BA%95%E5%B1%82%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F/" title="底层存储方式">底层存储方式</a>
+<p><strong>JavaScript使用的是 堆(Heap) 和 栈( Stack)</strong></p>
+<ol>
+<li><p>JavaScript基本类型数据都是直接按值存储在栈中的(Undefined、Null、不是new出来的布尔、数字和字符串)，每种类型的数据占用的内存空间的大小是确定的，并由系统自动分配和自动释放。这样带来的好处就是，内存可以及时得到回收，相对于堆来说 ，更加容易管理内存空间。</p>
+</li>
+<li><p>JavaScript引用类型数据被存储于堆中 (如对象、数组、函数等，它们是通过拷贝和new出来的）。其实，说存储于堆中，也不太准确，因为，引用类型的数据的地址指针是存储于栈中的，当我们想要访问引用类型的值的时候，需要先从栈中获得对象的地址指针，然后，在通过地址指针找到堆中的所需要的数据。</p>
+</li>
+</ol>
+</li>
+<li><p>Symbol类型在实际开发中的应用、可手动实现一个简单的Symbol</p>
+<ul>
+<li> Symbol是一种基本类型，由Symbol函数生成<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>()</span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">Symbol</span>()</span><br><span class="line">a === b <span class="comment">// false </span></span><br></pre></td></tr></table></figure></li>
+<li>不能new，会报错，返回一个值，不是对象</li>
+<li>Symbol 函数可以接受一个字符串作为参数</li>
+<li>Symbol 值可以作为标识符，用于对象的属性名，可以保证不会出现同名的属性。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>JavaScript中的变量在内存中的具体存储形式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">&#x27;1&#x27;</span> <span class="comment">// a存在栈内存中，‘1’也是在栈内存中</span></span><br><span class="line"><span class="keyword">let</span> b = &#123;<span class="attr">b</span>:<span class="string">&#x27;1&#x27;</span>&#125; <span class="comment">// b 存在栈内存中，&#123;b:&#x27;1&#x27;&#125;存在堆内存中，在栈内b的值是&#123;b:&#x27;1&#x27;&#125;的地址</span></span><br><span class="line"><span class="keyword">let</span> c = b <span class="comment">// 其实是&#123;b:&#x27;1&#x27;&#125;存在堆内存中地址赋值给了c,也就是说在堆内存中他们是一个同一个&#123;b:&#x27;1&#x27;&#125;</span></span><br><span class="line"><span class="keyword">let</span> d = a <span class="comment">// 会直接在栈内存中重新创建一个‘1’给d,因为a的值是基本数据类型</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>栈内存</th>
+<th>堆内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存储基础数据类型</td>
+<td>存储引用数据类型</td>
+</tr>
+<tr>
+<td>按值访问</td>
+<td>按引用访问</td>
+</tr>
+<tr>
+<td>储存的值大小固定</td>
+<td>储存的值大小不固定，可以动态调整</td>
+</tr>
+<tr>
+<td>由系统自动分配内存空间</td>
+<td>由代码进行指定分配</td>
+</tr>
+<tr>
+<td>空间小运用效率高</td>
+<td>空间大运用效率较低</td>
+</tr>
+<tr>
+<td>先进后出，后进先出</td>
+<td>无序储存，根据引用地址直接获取</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>基本类型对应的内置对象，以及他们之间的装箱拆箱操作</p>
+<ul>
+<li>内置对象<br>Object是 JavaScript 中所有对象的父对象 数据封装类对象：Object、Array、Boolean、Number 和 String 其他对象：Function、Math、Date、RegExp、Error。<br>特殊的基本包装类型(String、Number、Boolean)<br>arguments: 只存在于函数内部的一个类数组对象</li>
+<li>装箱和拆箱<ol>
+<li>装箱：<br>把基本数据类型转化为对应的引用数据类型的操作**，装箱分为隐式装箱和显示装箱</li>
+</ol>
+<ul>
+<li>隐式装箱：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">&#x27;abc&#x27;</span></span><br><span class="line"><span class="keyword">let</span> b = a.indexOf(<span class="string">&#x27;a&#x27;</span>) <span class="comment">// 0</span></span><br><span class="line"><span class="comment">// 上面的代码实现步骤为</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&#x27;abc&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> b = a.indexOf(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">a = <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+在上面的代码中，a是基本类型，它不是对象，不应该具有方法，js内部进行了一些列处理（装箱)， 使得它能够调用方法。在这个基本类型上调用方法，其实是在这个基本类型对象上调用方法。这个基本类型的对象是临时的，它只存在于方法调用那一行代码执行的瞬间，执行方法后立刻被销毁。实现机制：<br>创建String类型的一个实例；<br>在实例上调用指定的方法；<br>销毁这个实例；</li>
+<li>显示装箱<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&#x27;abc&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li>拆箱：<br>拆箱和装箱相反，就是把引用类型转化为基本类型的数据，通常通过引用类型的valueof()和toString（）方法实现<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"><span class="keyword">typeof</span> name  <span class="comment">// object</span></span><br><span class="line">name.toString() <span class="comment">// &#x27;name&#x27;</span></span><br><span class="line">name.valueOf() <span class="comment">// &#x27;name&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>强制类型转换</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span> + <span class="number">10</span> <span class="comment">//100</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">100</span> + <span class="string">&#x27;10&#x27;</span> <span class="comment">//10010</span></span><br><span class="line"><span class="comment">// == 运算符</span></span><br><span class="line"><span class="number">100</span> == <span class="string">&#x27;100&#x27;</span> <span class="comment">//true</span></span><br><span class="line"><span class="number">0</span> == <span class="string">&#x27;&#x27;</span> <span class="comment">//true</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span> <span class="comment">//true</span></span><br><span class="line"><span class="comment">//  语句</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(a)&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">100</span></span><br><span class="line"><span class="keyword">if</span>(b)&#123;&#125; <span class="comment">// 把数字转换为true</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">if</span>(c)&#123;&#125; <span class="comment">// 把空字符串转换为false</span></span><br><span class="line"><span class="comment">// 逻辑运算</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">10</span>&amp;&amp;<span class="number">0</span>); <span class="comment">// 0 把10转换成true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;&#x27;</span> || <span class="string">&#x27;abc&#x27;</span>); <span class="comment">// &#x27;abc&#x27; 把空字符串转换为false</span></span><br><span class="line"><span class="built_in">console</span>.log(!<span class="built_in">window</span>.abc); <span class="comment">// window.abc是undefined 把非undefined转换成true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断一个变量会被当做true还是false</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span></span><br><span class="line"><span class="built_in">console</span>.log(!!a); <span class="comment">// true</span></span><br></pre></td></tr></table></figure></li>
+<li><p>null和undefined的区别</p>
+<blockquote>
+<p>1995年JavaScript诞生时，最初像Java一样，只设置了null作为表示”无”的值。但是，JavaScript的设计者Brendan Eich，觉得这样做还不够，有两个原因。<br>首先，null像在Java里一样，被当成一个对象。但是，JavaScript的数据类型分成原始类型（primitive）和合成类型（complex）两大类，Brendan Eich觉得表示”无”的值最好不是对象。<br>其次，JavaScript的最初版本没有包括错误处理机制，发生数据类型不匹配时，往往是自动转换类型或者默默地失败。Brendan Eich觉得，如果null自动转为0，很不容易发现错误。<br>因此，Brendan Eich又设计了一个undefined。</p>
+</blockquote>
+<ul>
+<li>相同点<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="literal">null</span> || <span class="literal">undefined</span> ) <span class="comment">// 在if判断中都会自动转化为 fasle</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span> <span class="comment">// 相等运算符甚至直接报告两者相等</span></span><br></pre></td></tr></table></figure></li>
+<li>不同点<br>null表示”没有对象”，即该处不应该有值。<br>  （1） 作为函数的参数，表示该函数的参数不是对象。<br>  （2） 作为对象原型链的终点。<br>undefined表示”缺少值”，就是此处应该有一个值，但是还没有定义<br>  （1）变量被声明了，但没有赋值时，就等于undefined。<br>  （2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。<br>  （3）对象没有赋值的属性，该属性的值为undefined。<br>  （4）函数没有返回值时，默认返回undefined。</li>
+</ul>
+</li>
+<li><p>至少可以说出三种判断JavaScript数据类型的方式，以及他们的优缺点，如何准确的判断数组类型</p>
+<ol>
+<li>typeof 判断数据类型   但是引用数据类型无法具体判断 null无法直接判断 new操作符返回的都是object  函数返回的都是function</li>
+<li>instanceof运算符用于检测实例对象（参数）的原型链上是否出现构造函数的prototype<br>语法：object instanceof constructor<br>参数：object 某个实例对象 constructor 某个构造函数<br>描述：instanceof运算符用来检测constructor.propertype 是否存在于参数object的原型链上。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">D</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> C()</span><br><span class="line"><span class="built_in">console</span>.log(o <span class="keyword">instanceof</span> C) <span class="comment">//true,因为Object.getPrototypeOf(0) === C.prototype</span></span><br><span class="line"><span class="built_in">console</span>.log(o <span class="keyword">instanceof</span> D) <span class="comment">//false，D.prototype不在o的原型链上</span></span><br><span class="line"><span class="built_in">console</span>.log(o <span class="keyword">instanceof</span> <span class="built_in">Object</span>) <span class="comment">//true 同上</span></span><br><span class="line"></span><br><span class="line">C.prototype = &#123;&#125;</span><br><span class="line"><span class="keyword">var</span> o2 = <span class="keyword">new</span> C()</span><br><span class="line"><span class="built_in">console</span>.log(o2 <span class="keyword">instanceof</span> C) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(o <span class="keyword">instanceof</span> C) <span class="comment">// false C.prototype指向了一个空对象，这个空对象不在o的原型链上</span></span><br><span class="line">D.prototype = <span class="keyword">new</span> C() <span class="comment">// 继承</span></span><br><span class="line"><span class="keyword">var</span> o3 = <span class="keyword">new</span> D()</span><br><span class="line"><span class="built_in">console</span>.log(o3 <span class="keyword">instanceof</span> D) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(o3 <span class="keyword">instanceof</span> C) <span class="comment">// true C.prototype现在在o3的原型链上</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>instanceof运算符的左边必须是一个对象，像”string” instanceof String，true instanceof Boolean这样的字面量都会返回false。也就是说虽然能判断出对象的原型链上是否有构造函数的原型，但是只能判断出对象类型变量，字面量是判断不出的。</p>
+</blockquote>
+</li>
+<li>Object.prototype.toString()<br>每个对象都有一个toString()方法，该对象被表示为一个文本字符串时，或一个对象以预期的字符串方式引用时自动调用。默认情况下，toString()方法被每个Object对象继承，如果此方法在自定义对象中未被覆盖，toString()返回“[object type]”，其中type是对象的类型<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// null undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>)) <span class="comment">//[object Null] 很给力</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>)) <span class="comment">//[object Undefined] 很给力</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">Infinity</span>)) <span class="comment">//[object Number]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Number</span>.MAX_SAFE_INTEGER)) <span class="comment">//[object Number]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">NaN</span>)) <span class="comment">//[object Number]，NaN一般是数字运算得到的结果，返回Number还算可以接受</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">1</span>)) <span class="comment">//[object Number]</span></span><br><span class="line"><span class="keyword">var</span> n = <span class="number">100</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(n)) <span class="comment">//[object Number]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">0</span>)) <span class="comment">// [object Number]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Number</span>(<span class="number">1</span>))) <span class="comment">//[object Number] 很给力</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>))) <span class="comment">//[object Number] 很给力</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="string">&#x27;1&#x27;</span>)) <span class="comment">//[object String]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&#x27;2&#x27;</span>))) <span class="comment">// [object String]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Boolean</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>)) <span class="comment">// [object Boolean]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="number">1</span>))) <span class="comment">//[object Boolean]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Array</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>))) <span class="comment">// [object Array]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([])) <span class="comment">// [object Array]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Object</span>())) <span class="comment">// [object Object]</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> foo()</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(a)) <span class="comment">// [object Object]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Function</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Math</span>.floor)) <span class="comment">//[object Function]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(foo)) <span class="comment">//[object Function]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Symbol</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Symbol</span>(<span class="string">&#x27;222&#x27;</span>))) <span class="comment">//[object Symbol]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// RegExp</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="regexp">/sss/</span>)) <span class="comment">//[object RegExp]</span></span><br></pre></td></tr></table></figure>
+上面的结果，除了NaN返回Number稍微有点差池之外其他的都返回了意料之中的结果，都能满足实际开发的需求，于是我们可以写一个通用的函数来检测变量，字面量的类型。如下<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Type = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> type = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> typeArr = [<span class="string">&#x27;String&#x27;</span>, <span class="string">&#x27;Object&#x27;</span>, <span class="string">&#x27;Number&#x27;</span>, <span class="string">&#x27;Array&#x27;</span>, <span class="string">&#x27;Undefined&#x27;</span>, <span class="string">&#x27;Function&#x27;</span>, <span class="string">&#x27;Null&#x27;</span>, <span class="string">&#x27;Symbol&#x27;</span>, <span class="string">&#x27;Boolean&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;BigInt&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; typeArr.length; i++) &#123;</span><br><span class="line">        (<span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">            type[<span class="string">&#x27;is&#x27;</span> + name] = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj) === <span class="string">&#x27;[object &#x27;</span> + name + <span class="string">&#x27;]&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)(typeArr[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> type</span><br><span class="line">&#125;)()</span><br><span class="line"><span class="keyword">let</span> s = <span class="literal">true</span></span><br><span class="line"><span class="built_in">console</span>.log(Type.isBoolean(s)) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(Type.isRegExp(<span class="regexp">/22/</span>)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></li>
+<li>JSON.stringify() 转成json也能根据开头结尾来判断</li>
+</ol>
+</li>
+<li><p>可能发生隐式类型转换的场景以及转换原则，应如何避免或巧妙应用</p>
+<ol>
+<li>转换为字符串<br>使用toString() 需要注意的是数组会直接变成字符串 [1,2,3,4] =&gt; ‘1,2,3,4’</li>
+<li>转换为数字<br>ECMAScript 提供了两种把非数字的原始值转换成数字的方法，即 parseInt() 和 parseFloat() 。 只有对 String 类型调用这些方法，它们才能正确运行；对其他类型返回的都是 NaN。</li>
+<li>转换为 Boolean<br>undefined null ‘’ NaN 0 会转化成fasle<br>其他的是true</li>
+<li>强制类型转换<br>Boolean(value) - 把给定的值转换成 Boolean 型；<br>Number(value) - 把给定的值转换成数字（可以是整数或浮点数）； 如果转化不了就是NaN<br>String(value) - 把给定的值转换成字符串</li>
+<li>Boolean() 函数</li>
+<li>Number() 函数</li>
+<li>隐式类型转换</li>
+<li>自动转换 Boolean</li>
+<li>运算符</li>
+<li>对象</li>
+</ol>
+</li>
+<li><p>出现小数精度丢失的原因，JavaScript可以存储的最大数字、最大安全数字，JavaScript处理大数字的方法、避免精度丢失的方法<br>1、JS 数字精度丢失的一些典型问题（前端遇小数计算概率大，要有这个精度丢失的意识）<br>2、JS 数字精度丢失的原因（计算机用二进制存储数据，由于存储位置的限制有时会存在“舍去”。当模仿十进制进行四舍五入时，0舍1入，造成误差）<br>3、解决方案（一个对象+一个函数）（解决方案：把小数乘以倍数变成整数计算，再除以倍数变成原来的数。其中根据此思想封装了一个方法）<br>4、 BigInt  <strong>BigInt目前是第3阶段提案， 一旦添加到规范中，它就是JS 第二个数字数据类型，也将是 JS 第8种基本数据类型</strong></p>
+</li>
+</ul>
+<h2 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h2><ul>
+<li>理解原型设计模式以及JavaScript中的原型规则</li>
+<li>instanceof的底层实现原理，手动实现一个instanceof</li>
+<li>实现继承的几种方式以及他们的优缺点</li>
+<li>至少说出一种开源项目(如Node)中应用原型继承的案例</li>
+<li>可以描述new一个对象的详细过程，手动实现一个new操作符</li>
+<li>理解es6 class构造以及继承的底层实现原理</li>
+</ul>
+<h2 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h2><ul>
+<li>理解词法作用域和动态作用域</li>
+<li>理解JavaScript的作用域和作用域链</li>
+<li>理解JavaScript的执行上下文栈，可以应用堆栈信息快速定位问题</li>
+<li>this的原理以及几种不同使用场景的取值</li>
+<li>闭包的实现原理和作用，可以列举几个开发中闭包的实际应用</li>
+<li>理解堆栈溢出和内存泄漏的原理，如何防止</li>
+<li>如何处理循环的异步操作</li>
+<li>理解模块化解决的实际问题，可列举几个模块化方案并理解其中原理</li>
+</ul>
+<h2 id="执行机制"><a href="#执行机制" class="headerlink" title="执行机制"></a>执行机制</h2><ul>
+<li>为何try里面放return，finally还会执行，理解其内部机制</li>
+<li>JavaScript如何实现异步编程，可以详细描述EventLoop机制</li>
+<li>宏任务和微任务分别有哪些</li>
+<li>可以快速分析一个复杂的异步嵌套逻辑，并掌握分析方法</li>
+<li>使用Promise实现串行</li>
+<li>Node与浏览器EventLoop的差异</li>
+<li>如何在保证页面运行流畅的情况下处理海量数据</li>
+</ul>
+<h2 id="语法和API"><a href="#语法和API" class="headerlink" title="语法和API"></a>语法和API</h2><ul>
+<li>理解ECMAScript和JavaScript的关系</li>
+<li>熟练运用es5、es6提供的语法规范，</li>
+<li>熟练掌握JavaScript提供的全局对象（例如Date、Math）、全局函数（例如decodeURI、isNaN）、全局属性（例如Infinity、undefined）</li>
+<li>熟练应用map、reduce、filter 等高阶函数解决问题</li>
+<li>setInterval需要注意的点，使用settimeout实现setInterval</li>
+<li>JavaScript提供的正则表达式API、可以使用正则表达式（邮箱校验、URL解析、去重等）解决常见问题</li>
+<li>JavaScript异常处理的方式，统一的异常处理方案</li>
+</ul>
+<h1 id="HTML和CSS"><a href="#HTML和CSS" class="headerlink" title="HTML和CSS"></a>HTML和CSS</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
+<li>从规范的角度理解HTML，从分类和语义的角度使用标签</li>
+<li>常用页面标签的默认样式、自带属性、不同浏览器的差异、处理浏览器兼容问题的方式</li>
+<li>元信息类标签(head、title、meta)的使用目的和配置方法</li>
+<li>HTML5离线缓存原理</li>
+<li>可以使用Canvas API、SVG等绘制高性能的动画</li>
+</ul>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
+<li>CSS盒模型，在不同浏览器的差异</li>
+<li>CSS所有选择器及其优先级、使用场景，哪些可以继承，如何运用at规则</li>
+<li>CSS伪类和伪元素有哪些，它们的区别和实际应用</li>
+<li>HTML文档流的排版规则，CSS几种定位的规则、定位参照物、对文档流的影响，如何选择最好的定位方式，雪碧图实现原理</li>
+<li>水平垂直居中的方案、可以实现6种以上并对比它们的优缺点</li>
+<li>BFC实现原理，可以解决的问题，如何创建BFC</li>
+<li>可使用CSS函数复用代码，实现特殊效果</li>
+<li>PostCSS、Sass、Less的异同，以及使用配置，至少掌握一种</li>
+<li>CSS模块化方案、如何配置按需加载、如何防止CSS阻塞渲染</li>
+<li>熟练使用CSS实现常见动画，如渐变、移动、旋转、缩放等等</li>
+<li>CSS浏览器兼容性写法，了解不同API在不同浏览器下的兼容性情况</li>
+<li>掌握一套完整的响应式布局方案</li>
+</ul>
+<h2 id="手写"><a href="#手写" class="headerlink" title="手写"></a>手写</h2><ul>
+<li>手写图片瀑布流效果</li>
+<li>使用CSS绘制几何图形（圆形、三角形、扇形、菱形等）</li>
+<li>使用纯CSS实现曲线运动（贝塞尔曲线）</li>
+<li>实现常用布局（三栏、圣杯、双飞翼、吸顶），可是说出多种方式并理解其优缺点</li>
+</ul>
+<h1 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h1><h2 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h2><ul>
+<li>理解代码到底是什么，计算机如何将代码转换为可以运行的目标程序</li>
+<li>正则表达式的匹配原理和性能优化</li>
+<li>如何将JavaScript代码解析成抽象语法树(AST)</li>
+<li>base64的编码原理</li>
+<li>几种进制的相互转换计算方法，在JavaScript中如何表示和转换</li>
+</ul>
+<h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><ul>
+<li>理解什么是协议，了解TCP/IP网络协议族的构成，每层协议在应用程序中发挥的作用</li>
+<li>三次握手和四次挥手详细原理，为什么要使用这种机制</li>
+<li>有哪些协议是可靠，TCP有哪些手段保证可靠交付</li>
+<li>DNS的作用、DNS解析的详细过程，DNS优化原理</li>
+<li>CDN的作用和原理</li>
+<li>HTTP请求报文和响应报文的具体组成，能理解常见请求头的含义，有几种请求方式，区别是什么</li>
+<li>HTTP所有状态码的具体含义，看到异常状态码能快速定位问题</li>
+<li>HTTP1.1、HTTP2.0带来的改变</li>
+<li>HTTPS的加密原理，如何开启HTTPS，如何劫持HTTPS请求</li>
+<li>理解WebSocket协议的底层原理、与HTTP的区别</li>
+</ul>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><ul>
+<li>熟练使用前端常用的设计模式编写代码，如单例模式、装饰器模式、代理模式等</li>
+<li>发布订阅模式和观察者模式的异同以及实际应用</li>
+<li>可以说出几种设计模式在开发中的实际应用，理解框架源码中对设计模式的应用</li>
+</ul>
+<h1 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h1><h2 id="JavaScript编码能力"><a href="#JavaScript编码能力" class="headerlink" title="JavaScript编码能力"></a>JavaScript编码能力</h2><ul>
+<li>多种方式实现数组去重、扁平化、对比优缺点</li>
+<li>多种方式实现深拷贝、对比优缺点</li>
+<li>手写函数柯里化工具函数、并理解其应用场景和优势</li>
+<li>手写防抖和节流工具函数、并理解其内部原理和应用场景</li>
+<li>实现一个sleep函数</li>
+</ul>
+<h2 id="手动实现前端轮子"><a href="#手动实现前端轮子" class="headerlink" title="手动实现前端轮子"></a>手动实现前端轮子</h2><ul>
+<li>手动实现call、apply、bind</li>
+<li>手动实现符合Promise/A+规范的Promise、手动实现async await</li>
+<li>手写一个EventEmitter实现事件发布、订阅</li>
+<li>可以说出两种实现双向绑定的方案、可以手动实现</li>
+<li>手写JSON.stringify、JSON.parse</li>
+<li>手写一个模版引擎，并能解释其中原理</li>
+<li>手写懒加载、下拉刷新、上拉加载、预加载等效果</li>
+</ul>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
+<li>理解常见数据结构的特点，以及他们在不同场景下使用的优缺点</li>
+<li>理解数组、字符串的存储原理，并熟练应用他们解决问题</li>
+<li>理解二叉树、栈、队列、哈希表的基本结构和特点，并可以应用它解决问题</li>
+<li>了解图、堆的基本结构和使用场景</li>
+</ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li>可计算一个算法的时间复杂度和空间复杂度，可估计业务逻辑代码的耗时和内存消耗</li>
+<li>至少理解五种排序算法的实现原理、应用场景、优缺点，可快速说出时间、空间复杂度</li>
+<li>了解递归和循环的优缺点、应用场景、并可在开发中熟练应用</li>
+<li>可应用回溯算法、贪心算法、分治算法、动态规划等解决复杂问题</li>
+<li>前端处理海量数据的算法方案</li>
+</ul>
+<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><h2 id="浏览器API"><a href="#浏览器API" class="headerlink" title="浏览器API"></a>浏览器API</h2><ul>
+<li>浏览器提供的符合W3C标准的DOM操作API、浏览器差异、兼容性</li>
+<li>浏览器提供的浏览器对象模型 (BOM)提供的所有全局API、浏览器差异、兼容性</li>
+<li>大量DOM操作、海量数据的性能优化(合并操作、Diff、requestAnimationFrame等)</li>
+<li>浏览器海量数据存储、操作性能优化</li>
+<li>DOM事件流的具体实现机制、不同浏览器的差异、事件代理</li>
+<li>前端发起网络请求的几种方式及其底层实现、可以手写原生ajax、fetch、可以熟练使用第三方库</li>
+<li>浏览器的同源策略，如何避免同源策略，几种方式的异同点以及如何选型</li>
+<li>浏览器提供的几种存储机制、优缺点、开发中正确的选择</li>
+<li>浏览器跨标签通信</li>
+</ul>
+<h2 id="浏览器原理"><a href="#浏览器原理" class="headerlink" title="浏览器原理"></a>浏览器原理</h2><ul>
+<li>各浏览器使用的JavaScript引擎以及它们的异同点、如何在代码中进行区分</li>
+<li>请求数据到请求结束与服务器进行了几次交互</li>
+<li>可详细描述浏览器从输入URL到页面展现的详细过程</li>
+<li>浏览器解析HTML代码的原理，以及构建DOM树的流程</li>
+<li>浏览器如何解析CSS规则，并将其应用到DOM树上</li>
+<li>浏览器如何将解析好的带有样式的DOM树进行绘制</li>
+<li>浏览器的运行机制，如何配置资源异步同步加载</li>
+<li>浏览器回流与重绘的底层原理，引发原因，如何有效避免</li>
+<li>浏览器的垃圾回收机制，如何避免内存泄漏</li>
+<li>浏览器采用的缓存方案，如何选择和控制合适的缓存方案</li>
+</ul>
+<h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><ul>
+<li>理解Node在应用程序中的作用，可以使用Node搭建前端运行环境、使用Node操作文件、操作数据库等等</li>
+<li>掌握一种Node开发框架，如Express，Express和Koa的区别</li>
+<li>熟练使用Node提供的API如Path、Http、Child Process等并理解其实现原理</li>
+<li>Node的底层运行原理、和浏览器的异同</li>
+<li>Node事件驱动、非阻塞机制的实现原理</li>
+</ul>
+<h1 id="框架和类库"><a href="#框架和类库" class="headerlink" title="框架和类库"></a>框架和类库</h1><h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><ul>
+<li>理解泛型、接口等面向对象的相关概念，TypeScript对面向对象理念的实现</li>
+<li>理解使用TypeScript的好处，掌握TypeScript基础语法</li>
+<li>TypeScript的规则检测原理</li>
+<li>可以在React、Vue等框架中使用TypeScript进行开发</li>
+</ul>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><ul>
+<li>React和vue 选型和优缺点、核心架构的区别</li>
+<li>React中setState的执行机制，如何有效的管理状态</li>
+<li>React的事件底层实现机制</li>
+<li>React的虚拟DOM和Diff算法的内部实现</li>
+<li>React的Fiber工作原理，解决了什么问题</li>
+<li>React Router和Vue Router的底层实现原理、动态加载实现原理</li>
+<li>可熟练应用React API、生命周期等，可应用HOC、render props、Hooks等高阶用法解决问题</li>
+<li>基于React的特性和原理，可以手动实现一个简单的React</li>
+</ul>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
+<li>熟练使用Vue的API、生命周期、钩子函数</li>
+<li>MVVM框架设计理念</li>
+<li>Vue双向绑定实现原理、Diff算法的内部实现</li>
+<li>Vue的事件机制</li>
+<li>从template转换成真实DOM的实现机制</li>
+</ul>
+<h2 id="多端开发"><a href="#多端开发" class="headerlink" title="多端开发"></a>多端开发</h2><ul>
+<li>单页面应用（SPA）的原理和优缺点，掌握一种快速开发SPA的方案</li>
+<li>理解Viewport、em、rem的原理和用法，分辨率、px、ppi、dpi、dp的区别和实际应用</li>
+<li>移动端页面适配解决方案、不同机型适配方案</li>
+<li>掌握一种JavaScript移动客户端开发技术，如React Native：可以搭建React Native开发环境，熟练进行开发，可理解React Native的运作原理，不同端适配</li>
+<li>掌握一种JavaScript PC客户端开发技术，如Electron：可搭建Electron开发环境，熟练进行开发，可理解Electron的运作原理</li>
+<li>掌握一种小程序开发框架或原生小程序开发</li>
+<li>理解多端框架的内部实现原理，至少了解一个多端框架的使用</li>
+</ul>
+<h2 id="数据流管理"><a href="#数据流管理" class="headerlink" title="数据流管理"></a>数据流管理</h2><ul>
+<li>掌握React和Vue传统的跨组件通信方案，对比采用数据流管理框架的异同</li>
+<li>熟练使用Redux管理数据流，并理解其实现原理，中间件实现原理</li>
+<li>熟练使用Mobx管理数据流，并理解其实现原理，相比Redux有什么优势</li>
+<li>熟练使用Vuex管理数据流，并理解其实现原理</li>
+<li>以上数据流方案的异同和优缺点，不情况下的技术选型</li>
+</ul>
+<h2 id="实用库"><a href="#实用库" class="headerlink" title="实用库"></a>实用库</h2><ul>
+<li>至少掌握一种UI组件框架，如antd design，理解其设计理念、底层实现</li>
+<li>掌握一种图表绘制框架，如Echart，理解其设计理念、底层实现，可以自己实现图表</li>
+<li>掌握一种GIS开发框架，如百度地图API</li>
+<li>掌握一种可视化开发框架，如Three.js、D3</li>
+<li>工具函数库，如lodash、underscore、moment等，理解使用的工具类或工具函数的具体实现原理</li>
+</ul>
+<h2 id="开发和调试"><a href="#开发和调试" class="headerlink" title="开发和调试"></a>开发和调试</h2><ul>
+<li>熟练使用各浏览器提供的调试工具</li>
+<li>熟练使用一种代理工具实现请求代理、抓包，如charls</li>
+<li>可以使用Android、IOS模拟器进行调试，并掌握一种真机调试方案</li>
+<li>了解Vue、React等框架调试工具的使用</li>
+</ul>
+<h1 id="前端工程"><a href="#前端工程" class="headerlink" title="前端工程"></a>前端工程</h1><h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><ul>
+<li>理解npm、yarn依赖包管理的原理，两者的区别</li>
+<li>可以使用npm运行自定义脚本</li>
+<li>理解Babel、ESLint、webpack等工具在项目中承担的作用</li>
+<li>ESLint规则检测原理，常用的ESLint配置</li>
+<li>Babel的核心原理，可以自己编写一个Babel插件</li>
+<li>可以配置一种前端代码兼容方案，如Polyfill</li>
+<li>Webpack的编译原理、构建流程、热更新原理，chunk、bundle和module的区别和应用</li>
+<li>可熟练配置已有的loaders和plugins解决问题，可以自己编写loaders和plugins</li>
+</ul>
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><ul>
+<li>正向代理与反向代理的特点和实例</li>
+<li>可手动搭建一个简单的nginx服务器、</li>
+<li>熟练应用常用的nginx内置变量，掌握常用的匹配规则写法</li>
+<li>可以用nginx实现请求过滤、配置gzip、负载均衡等，并能解释其内部原理</li>
+</ul>
+<h2 id="开发提速"><a href="#开发提速" class="headerlink" title="开发提速"></a>开发提速</h2><ul>
+<li>熟练掌握一种接口管理、接口mock工具的使用，如yapi</li>
+<li>掌握一种高效的日志埋点方案，可快速使用日志查询工具定位线上问题</li>
+<li>理解TDD与BDD模式，至少会使用一种前端单元测试框架</li>
+</ul>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><ul>
+<li>理解Git的核心原理、工作流程、和SVN的区别</li>
+<li>熟练使用常规的Git命令、git rebase、git stash等进阶命令</li>
+<li>可以快速解决线上分支回滚、线上分支错误合并等复杂问题</li>
+</ul>
+<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><ul>
+<li>理解CI/CD技术的意义，至少熟练掌握一种CI/CD工具的使用，如Jenkins</li>
+<li>可以独自完成架构设计、技术选型、环境搭建、全流程开发、部署上线等一套完整的开发流程（包括Web应用、移动客户端应用、PC客户端应用、小程序、H5等等）</li>
+</ul>
+<h2 id="项目和业务"><a href="#项目和业务" class="headerlink" title="项目和业务"></a>项目和业务</h2><ul>
+<li>了解后端的开发方式，在应用程序中的作用，至少会使用一种后端语言</li>
+<li>掌握数据最终在数据库中是如何落地存储的，能看懂表结构设计、表之间的关联，至少会使用一种数据库</li>
+</ul>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><ul>
+<li>了解前端性能衡量指标、性能监控要点，掌握一种前端性能监控方案</li>
+<li>了解常见的Web、App性能优化方案</li>
+<li>SEO排名规则、SEO优化方案、前后端分离的SEO</li>
+<li>SSR实现方案、优缺点、及其性能优化</li>
+<li>Webpack的性能优化方案</li>
+<li>Canvas性能优化方案</li>
+<li>React、Vue等框架使用性能优化方案</li>
+</ul>
+<h2 id="前端安全"><a href="#前端安全" class="headerlink" title="前端安全"></a>前端安全</h2><ul>
+<li>XSS攻击的原理、分类、具体案例，前端如何防御</li>
+<li>CSRF攻击的原理、具体案例，前端如何防御</li>
+<li>HTTP劫持、页面劫持的原理、防御措施</li>
+</ul>
+<h2 id="业务相关"><a href="#业务相关" class="headerlink" title="业务相关"></a>业务相关</h2><ul>
+<li>能理解所开发项目的整体业务形态、业务目标、业务架构，可以快速定位线上业务问题</li>
+<li>能理解所开发项目整体的技术架构、能快读的根据新需求进行开发规划、能快速根据业务报警、线上日志等定位并解决线上技术问题</li>
+<li>可以将自己的想法或新技术在业务中落地实践，尽量在团队中拥有一定的不可替代性</li>
+</ul>
+<h1 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h1><p>转载<br>作者：ConardLi<br>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903830887366670">https://juejin.cn/post/6844903830887366670</a><br>来源：稀土掘金</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">罗慧</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/11/25/%E5%89%8D%E7%AB%AF%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95/">http://example.com/2021/11/25/%E5%89%8D%E7%AB%AF%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">罗慧</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95/">前端自检清单</a></div><div class="post_share"><div class="social-share" data-image="/imgs/2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/11/25/%E5%BA%95%E5%B1%82%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F/"><img class="prev-cover" src="/imgs/5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">底层存储方式</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/16/webpack-%E5%85%A5%E5%8F%A3%E8%B5%B7%E7%82%B9/"><img class="next-cover" src="/imgs/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">webpack入口起点</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">罗慧</div><div class="author-info__description">技术博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>按钮名称</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">加油学习！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">JavaScript基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">变量和类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">1.2.</span> <span class="toc-text">原型和原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85"><span class="toc-number">1.3.</span> <span class="toc-text">作用域和闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.</span> <span class="toc-text">执行机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E5%92%8CAPI"><span class="toc-number">1.5.</span> <span class="toc-text">语法和API</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E5%92%8CCSS"><span class="toc-number">2.</span> <span class="toc-text">HTML和CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">2.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.2.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%86%99"><span class="toc-number">2.3.</span> <span class="toc-text">手写</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80"><span class="toc-number">3.</span> <span class="toc-text">计算机基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">编译原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.2.</span> <span class="toc-text">网络协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">设计模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">数据结构和算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E7%BC%96%E7%A0%81%E8%83%BD%E5%8A%9B"><span class="toc-number">4.1.</span> <span class="toc-text">JavaScript编码能力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E5%89%8D%E7%AB%AF%E8%BD%AE%E5%AD%90"><span class="toc-number">4.2.</span> <span class="toc-text">手动实现前端轮子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">4.3.</span> <span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-number">4.4.</span> <span class="toc-text">算法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">5.</span> <span class="toc-text">运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8API"><span class="toc-number">5.1.</span> <span class="toc-text">浏览器API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86"><span class="toc-number">5.2.</span> <span class="toc-text">浏览器原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node"><span class="toc-number">5.3.</span> <span class="toc-text">Node</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6%E5%92%8C%E7%B1%BB%E5%BA%93"><span class="toc-number">6.</span> <span class="toc-text">框架和类库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript"><span class="toc-number">6.1.</span> <span class="toc-text">TypeScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React"><span class="toc-number">6.2.</span> <span class="toc-text">React</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue"><span class="toc-number">6.3.</span> <span class="toc-text">Vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%AB%AF%E5%BC%80%E5%8F%91"><span class="toc-number">6.4.</span> <span class="toc-text">多端开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E7%AE%A1%E7%90%86"><span class="toc-number">6.5.</span> <span class="toc-text">数据流管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E5%BA%93"><span class="toc-number">6.6.</span> <span class="toc-text">实用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%92%8C%E8%B0%83%E8%AF%95"><span class="toc-number">6.7.</span> <span class="toc-text">开发和调试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B"><span class="toc-number">7.</span> <span class="toc-text">前端工程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">7.1.</span> <span class="toc-text">项目构建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx"><span class="toc-number">7.2.</span> <span class="toc-text">nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%8F%90%E9%80%9F"><span class="toc-number">7.3.</span> <span class="toc-text">开发提速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-number">7.4.</span> <span class="toc-text">版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90"><span class="toc-number">7.5.</span> <span class="toc-text">持续集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%92%8C%E4%B8%9A%E5%8A%A1"><span class="toc-number">7.6.</span> <span class="toc-text">项目和业务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-number">7.7.</span> <span class="toc-text">性能优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8"><span class="toc-number">7.8.</span> <span class="toc-text">前端安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E7%9B%B8%E5%85%B3"><span class="toc-number">7.9.</span> <span class="toc-text">业务相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%84%E6%BA%90"><span class="toc-number">8.</span> <span class="toc-text">资源</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/01/12/%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/" title="路由模式"><img src="/imgs/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="路由模式"/></a><div class="content"><a class="title" href="/2022/01/12/%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/" title="路由模式">路由模式</a><time datetime="2022-01-12T06:35:39.841Z" title="发表于 2022-01-12 14:35:39">2022-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/12/vue-%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E7%AF%87/" title="vue实例方法"><img src="/imgs/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue实例方法"/></a><div class="content"><a class="title" href="/2022/01/12/vue-%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E7%AF%87/" title="vue实例方法">vue实例方法</a><time datetime="2022-01-12T06:35:39.798Z" title="发表于 2022-01-12 14:35:39">2022-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/12/hello-world/" title="Hello World"><img src="/imgs/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/01/12/hello-world/" title="Hello World">Hello World</a><time datetime="2022-01-12T06:07:47.751Z" title="发表于 2022-01-12 14:07:47">2022-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/10/extends%E5%92%8Cimplements%E5%8C%BA%E5%88%AB/" title="extends和implements区别"><img src="/imgs/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="extends和implements区别"/></a><div class="content"><a class="title" href="/2022/01/10/extends%E5%92%8Cimplements%E5%8C%BA%E5%88%AB/" title="extends和implements区别">extends和implements区别</a><time datetime="2022-01-09T16:00:00.000Z" title="发表于 2022-01-10 00:00:00">2022-01-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/06/vue3%E4%BD%BF%E7%94%A8/" title="vue3的使用方式"><img src="/imgs/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3的使用方式"/></a><div class="content"><a class="title" href="/2022/01/06/vue3%E4%BD%BF%E7%94%A8/" title="vue3的使用方式">vue3的使用方式</a><time datetime="2022-01-05T16:00:00.000Z" title="发表于 2022-01-06 00:00:00">2022-01-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 罗慧</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
